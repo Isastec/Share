@@ -59,7 +59,7 @@ app.listen(port, ()=>{
     comando.stdout.on("data", function(datos){
 
           
-        ip =   datos.toString().match(/\d.+[0-9]$/mg,)
+        ip =   datos.toString().match(/Dirección IPv4\W+\d+\..*|Puerta de enlace predeterminada\W+\d+\..*/g)
 
          console.log("salida", ip)   
 })
